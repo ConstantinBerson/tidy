@@ -10,6 +10,9 @@
 /node_modules
 npm-debug.log
 yarn-error.log
+#Tauri
+/src-tauri/target
+/src-tauri/gen
 
 # IDEs and editors
 .idea/
