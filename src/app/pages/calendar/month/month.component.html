@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <button class="btn">
+            <i class="bi-caret-left-fill"></i>
+        </button>
+        <span style="font-weight: bold;">November</span>
+        <button class="btn">
+            <i class="bi-caret-right-fill"></i>
+        </button>
+    </div>
+    <div class="days row">
+        <span *ngFor="let day of days">{{day}}</span>
+    </div>
+    <div class="month" >
+        <div class="week row" *ngFor="let week of monthCalendar">
+            <button class="btn day" *ngFor="let day of week" [disabled]="day.disabled">
+                {{day.num}}
+            </button>
+        </div>
+    </div>
+</div>

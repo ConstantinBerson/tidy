@@ -1,0 +1,52 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap-icons";
+
+html,body{
+    padding: 0;
+    margin: 0;
+    font-size: 15px;
+    font-family: sans-serif;
+    background: #f5f5f5;
+}
+button{
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    padding: 0.2em 0.3em;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+i+span{
+    margin-left: 0.75em;
+}
+.btn-action{
+    background: white;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+[class^="col"]{
+    display: flex;
+    flex-direction: column;
+}
+//badge
+.badge>span{
+    padding: .25em;
+    border-radius: 5px;
+    margin-right: 1em;
+}
+//Priority 
+.critical{
+    background: orange;
+}
+.important{
+    background-color: yellow;
+}
+
+
+//group
+.group{
+    border: 1px solid black;
+}

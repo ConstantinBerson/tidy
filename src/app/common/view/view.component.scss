@@ -1,0 +1,59 @@
+.container{
+    height: 100vh;
+    padding: 0 1em;
+    overflow: hidden;
+}
+.nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+        width: 8%;
+        min-width: 100px;
+    }
+    .search{
+        width: 30%;
+        height: fit-content;
+        padding: 0.4em;
+        cursor: text;
+        background-color: white;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        span{
+            margin-left: 1em;
+        }
+        min-width: 250px;
+    }
+}
+.row{
+    display: flex;
+    height: 100%;
+    .side-nav{
+        margin-top: 1.5em;
+        padding-left: 1em;
+        width: 20vw;
+        min-width: 150px;
+        button{
+            margin-bottom: 1em;
+        }
+        .btn-group>button{
+            display: block;
+        }
+        #projects{
+            padding: 0.2em 0.3em;
+        }
+        ul{
+            list-style-type: none;
+            padding-left: 1.25em;
+        }
+    }
+    .content{
+        width: 80vw;
+        padding: 1em;
+        overflow: hidden;
+    }
+}
+

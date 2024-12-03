@@ -1,0 +1,8 @@
+<div class="container">
+    <button class="notif" (click)="openDialog()">
+        <i class="bi-bell-fill"></i>
+    </button>
+    <div class="back-drop" [ngClass]="{'hidden': !show}" (click)="openDialog()">
+    </div>
+    <div class="notif-content" [ngClass]="{'hidden': !show}"></div>
+</div>

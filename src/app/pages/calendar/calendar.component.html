@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="view">
+        <div class="date">
+            <h3>November 2024, Week 2</h3>
+        </div>
+        <div class="btn-nav-container">
+            <button class="btn" 
+                (click)="changeView('daily')" 
+                [ngClass]="{'active': view=='daily'}"
+            >
+                Daily View
+            </button>
+            <button class="btn" 
+                (click)="changeView('weekly')" 
+                [ngClass]="{'active': view=='weekly'}"
+            >
+                Weekly
+            </button>
+            <button class="btn" 
+                (click)="changeView('monthly')" 
+                [ngClass]="{'active': view=='monthly'}"
+                >
+                Monthly
+            </button>
+        </div>
+    </div>
+    <div class="views">
+        @if (view=="weekly") {
+            <app-weekly></app-weekly>
+        }@else if (view=="monthly") {
+            <app-monthly></app-monthly>
+        }@else {
+            <app-daily-view></app-daily-view>
+        }
+    </div>
+</div>

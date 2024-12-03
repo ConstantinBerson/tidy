@@ -1,0 +1,45 @@
+.days{
+    display: flex;
+    flex-direction: row;
+    height: 78vh;
+    overflow: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.192);
+    .disabled{
+        filter: contrast(75%) brightness(90%);
+        button{
+            display: none;
+        }
+    }
+    .day{
+        margin-left: 1em;
+        width: fit-content;
+        .label{
+            margin-bottom: 1.5em;
+        }
+        .tasks{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .task{
+            width: 15vw;
+            margin-top: .5em;
+            border-radius: .5em;
+            background-color: white;
+            padding: 0.1em 1em;
+        }
+        
+        .dashed{
+            border: 1px gray dashed;
+            text-align: center;
+            width: 15vw;
+            margin-top: .5em;
+            background: transparent !important;
+            
+        }
+    }
+}
+.date{
+    font-weight: bold;
+}

@@ -1,0 +1,16 @@
+.container{
+    width: 50vw;
+    padding: 1em;
+    min-height: 200px;
+    input{
+        padding: 0.2em;
+        border: 0;
+        margin-left: 0.5em;
+        font-size: 1.1rem;
+        border-bottom: 1px solid rgba(128, 128, 128, 0.349);
+        width: 90%;
+        &:focus{
+            outline: 0;
+        }
+    }
+}

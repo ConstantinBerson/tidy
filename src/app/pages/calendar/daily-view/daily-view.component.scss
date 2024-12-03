@@ -1,0 +1,86 @@
+.date{
+    font-weight: bold;
+    margin-bottom: 1.5em;
+}
+.days{
+    display: flex;
+    justify-content: center;
+    &>div{
+        display: flex;
+        border-radius: 5px;
+        border: 1px white solid;
+        padding: .5em 2em;
+        width: fit-content;
+    }
+}
+.day{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: .25em 2em;
+    padding: .25em;
+    border-radius: .5em;
+    span{
+        margin: .1em;
+    }
+}
+.day.active{
+    background-color: white;
+    .dot{
+        width: 5px;
+        height: 5px;
+        background-color: #8f8f8f;
+        border-radius: 5px;
+    }
+}
+.filter{
+    display: flex;
+    margin: 1em 0;
+    .form-select-group{
+        margin-left: 2em;
+        select{
+            border: 0;
+            padding: .25em;
+            background-color: white;
+            border-radius: .25em;
+        }
+        select:focus{
+            outline: 0;
+        }
+    }
+}
+.tasks{
+    max-height: 55vh;
+    overflow-y: auto;
+    .input-form-group{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        padding: .75em .25em;
+        border-radius: 10px;
+        margin-bottom: 1em;
+        div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        span {
+            margin-right: 1em;
+        }
+        .badge{
+            span{
+                padding: .25em .4em;
+                margin: 0 .5em;
+                border-radius: .5em;
+            }
+        }
+        .due-date{
+            margin-left: 2em;
+            span{
+                margin-left: .25em;
+            }
+        }
+    }
+}

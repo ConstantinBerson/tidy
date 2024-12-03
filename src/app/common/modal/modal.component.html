@@ -1,0 +1,8 @@
+@if (backdropClose) {
+    <div class="dialog-backdrop" (click)="closeDialog()"></div>
+}@else {
+    <div class="dialog-backdrop"></div>
+}
+<div class="dialog-content">
+    <ng-template #dialogContent></ng-template>
+</div>

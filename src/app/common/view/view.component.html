@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="nav">
+        <img src="./icon-1-light.png" alt="" class="logo">
+        <div class="search" (click)="openSearch()">
+            <i class="bi-search"></i>
+            <span>Search tasks or projects . . .</span>
+        </div>
+        <app-notification></app-notification>
+    </div>
+    <div class="row">
+        <div class="side-nav">
+            <button class="add" (click)="addTask()">
+                <i class="bi-plus-circle-dotted"></i>
+                <span>Add Task</span>
+            </button>
+            <div class="btn-group">
+                <button>
+                    <i class="bi-calendar2-date"></i>
+                    <span>Today's Tasks</span>
+                </button>
+                <button routerLink="calendar">
+                    <i class="bi-calendar2"></i>
+                    <span>Calendar</span>
+                </button>
+                <button>
+                    <i class="bi-clock-history"></i>
+                    <span>History</span>
+                </button>
+            </div>
+            <button class="add" (click)="newProject()">
+                <i class="bi-plus-circle-dotted"></i>
+                <span>New Project</span>
+            </button>
+            <div class="projects">
+                <div id="projects">
+                    <i class="bi-journals"></i>
+                    <span>Projects</span>
+                </div>
+                <ul>
+                    <li>
+                        <button routerLink="project">
+                            <i class="bi-journal"></i>
+                            <span>Project 1</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="content">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,55 @@
+.project-header{
+    display: flex;
+    margin-bottom: 2em;
+    &>span{
+        font-size: 1.3rem;
+        font-weight: bold;
+    }
+    button{
+        margin-left: 3em;
+        background: white;
+        padding: 0.3em 0.4em;
+    }
+}
+.sections{
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    .section{
+        margin-left: 1em;
+        width: fit-content;
+        .header{
+            display: flex;
+            justify-content: space-between;
+            .btn-container>button{
+                margin-left: .5em;
+            }
+        }
+        .label{
+            margin-bottom: 1.5em;
+        }
+        .tasks{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .task{
+            width: 15vw;
+            margin-top: .5em !important;
+            border-radius: .5em;
+            background-color: white;
+            padding: 0.1em 1em;
+            box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.185);
+        }        
+        .dashed{
+            border: 1px gray dashed;
+            text-align: center;
+            width: 15vw;
+            margin-top: .5em;
+            background: transparent !important;
+        }
+    }   
+    .section-title{
+        font-weight: bold;
+    } 
+}

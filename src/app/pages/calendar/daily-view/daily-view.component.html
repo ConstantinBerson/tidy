@@ -1,0 +1,224 @@
+<div class="container">
+    <div class="days">
+        <div>
+            <button class="btn">
+                <i class="bi-caret-left-fill"></i>
+            </button>
+            @for (day of week; track $index) {
+                <div class="day" [ngClass]="{'active': $index==1}">
+                    <span>{{days[$index]}}</span>
+                    <span>{{day}}</span>
+                    <span class="dot"></span>
+                </div>
+            }
+            <button class="btn">
+                <i class="bi-caret-right-fill"></i>
+            </button>
+        </div>
+    </div>
+    <div class="filter">
+        <div class="form-select-group">
+            <label for="priority">Priority : </label>
+            <select name="Priority" id="priority" value="all">
+                <option value="all">All</option>
+                <option value="critical">Critical</option>
+            </select>
+        </div>
+        <div class="form-select-group">
+            <label for="group">Group : </label>
+            <select name="Group" id="group" value="all">
+                <option value="all">All</option>
+            </select>
+        </div>
+        <div class="form-select-group">
+            <label for="tag">Tag : </label>
+            <select name="Tag" id="tag" value="all">
+                <option value="all">All</option>
+            </select>
+        </div>
+    </div>
+    <div class="tasks">
+        <form>
+            <div class="input-form-group">
+                <div class="detail">
+                    <input type="checkbox" name="status">
+                    <span>Determine project goal (task label) </span>
+                    <span> Project Name</span>
+                </div>
+                <div>
+                    <div class="badge">
+                        <span class="priority critical">Critical</span>
+                        <span class="group">Group</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                    <div class="due-date">
+                        <i class="bi-clock"></i>
+                        <span>14:00 - 15:30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-form-group">
+                <div class="detail">
+                    <input type="checkbox" name="status">
+                    <span>Determine project goal (task label) </span>
+                    <span> Project Name</span>
+                </div>
+                <div>
+                    <div class="badge">
+                        <span class="priority critical">Critical</span>
+                        <span class="group">Group</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                    <div class="due-date">
+                        <i class="bi-clock"></i>
+                        <span>14:00 - 15:30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-form-group">
+                <div class="detail">
+                    <input type="checkbox" name="status">
+                    <span>Determine project goal (task label) </span>
+                    <span> Project Name</span>
+                </div>
+                <div>
+                    <div class="badge">
+                        <span class="priority critical">Critical</span>
+                        <span class="group">Group</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                    <div class="due-date">
+                        <i class="bi-clock"></i>
+                        <span>14:00 - 15:30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-form-group">
+                <div class="detail">
+                    <input type="checkbox" name="status">
+                    <span>Determine project goal (task label) </span>
+                    <span> Project Name</span>
+                </div>
+                <div>
+                    <div class="badge">
+                        <span class="priority critical">Critical</span>
+                        <span class="group">Group</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                    <div class="due-date">
+                        <i class="bi-clock"></i>
+                        <span>14:00 - 15:30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-form-group">
+                <div class="detail">
+                    <input type="checkbox" name="status">
+                    <span>Determine project goal (task label) </span>
+                    <span> Project Name</span>
+                </div>
+                <div>
+                    <div class="badge">
+                        <span class="priority critical">Critical</span>
+                        <span class="group">Group</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                    <div class="due-date">
+                        <i class="bi-clock"></i>
+                        <span>14:00 - 15:30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-form-group">
+                <div class="detail">
+                    <input type="checkbox" name="status">
+                    <span>Determine project goal (task label) </span>
+                    <span> Project Name</span>
+                </div>
+                <div>
+                    <div class="badge">
+                        <span class="priority critical">Critical</span>
+                        <span class="group">Group</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                    <div class="due-date">
+                        <i class="bi-clock"></i>
+                        <span>14:00 - 15:30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-form-group">
+                <div class="detail">
+                    <input type="checkbox" name="status">
+                    <span>Determine project goal (task label) </span>
+                    <span> Project Name</span>
+                </div>
+                <div>
+                    <div class="badge">
+                        <span class="priority critical">Critical</span>
+                        <span class="group">Group</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                    <div class="due-date">
+                        <i class="bi-clock"></i>
+                        <span>14:00 - 15:30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-form-group">
+                <div class="detail">
+                    <input type="checkbox" name="status">
+                    <span>Determine project goal (task label) </span>
+                    <span> Project Name</span>
+                </div>
+                <div>
+                    <div class="badge">
+                        <span class="priority critical">Critical</span>
+                        <span class="group">Group</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                    <div class="due-date">
+                        <i class="bi-clock"></i>
+                        <span>14:00 - 15:30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-form-group">
+                <div class="detail">
+                    <input type="checkbox" name="status">
+                    <span>Determine project goal (task label) </span>
+                    <span> Project Name</span>
+                </div>
+                <div>
+                    <div class="badge">
+                        <span class="priority critical">Critical</span>
+                        <span class="group">Group</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                    <div class="due-date">
+                        <i class="bi-clock"></i>
+                        <span>14:00 - 15:30</span>
+                    </div>
+                </div>
+            </div>
+            <div class="input-form-group">
+                <div class="detail">
+                    <input type="checkbox" name="status">
+                    <span>Determine project goal (task label) </span>
+                    <span> Project Name</span>
+                </div>
+                <div>
+                    <div class="badge">
+                        <span class="priority critical">Critical</span>
+                        <span class="group">Group</span>
+                        <span class="tag">Tag</span>
+                    </div>
+                    <div class="due-date">
+                        <i class="bi-clock"></i>
+                        <span>14:00 - 15:30</span>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

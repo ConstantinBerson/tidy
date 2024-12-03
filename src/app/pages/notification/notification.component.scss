@@ -1,0 +1,32 @@
+.container{
+    position: relative;
+}
+.notif{
+    font-size: large;
+    margin: 0;
+}
+.notif-content{
+    position: absolute;
+    background: white;
+    border-radius: 10px;
+    width: 25vw;
+    height: 500px;
+    min-width: 300px;
+    border: rgba(128, 128, 128, 0.288) solid 1px;
+    z-index: 100;
+    transform: translateX(-90%);
+}
+.back-drop{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: transparent;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    padding: 0 1em;
+    margin-top: 2.5em;
+}
+.hidden{
+    display: none;
+}
