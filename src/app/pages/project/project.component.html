@@ -7,108 +7,45 @@
         </button>
     </div>
     <div class="project">
-        <div class="sections">
-            <div class="section">
-                <div class="header">
-                    <span class="section-title">To Do</span>
-                    <div class="btn-container">
-                        <button>
-                            <i class="bi-plus-circle-fill"></i>
-                        </button>
-                        <button>
-                            <i class="bi-three-dots"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="tasks">
-                    <div class="task card">
-                        <p class="label">Set final deadline </p>
-                        <div class="badge">
-                            <span class="priority critical">Critical</span>
-                            <span class="group">Group</span>
+        <div class="sections" cdkDropListGroup>
+            @for (section of projects; track $index) {
+                <div class="section">
+                    <div class="header">
+                        <span class="section-title">{{section.sectionLabel}}</span>
+                        <div class="btn-container">
+                            <button>
+                                <i class="bi-plus-circle-fill"></i>
+                            </button>
+                            <button>
+                                <i class="bi-three-dots"></i>
+                            </button>
                         </div>
-                        <p>
-                            <i class="bi-clock"></i>
-                            <span>14:00 - 15:30</span>
-                        </p>
                     </div>
-                    <div class="task card">
-                        <p class="label">Set final deadline </p>
-                        <div class="badge">
-                            <span class="priority critical">Critical</span>
-                            <span class="group">Group</span>
-                        </div>
-                        <p>
-                            <i class="bi-clock"></i>
-                            <span>14:00 - 15:30</span>
-                        </p>
-                    </div>
-                    <button class="dashed add">
-                        <i class="bi-plus-circle-dotted"></i>
-                        <span>Add Task</span>
-                    </button>
-                </div>
-            </div>
-            <div class="section">
-                <div class="header">
-                    <span class="section-title">In progress</span>
-                    <div class="btn-container">
-                        <button>
-                            <i class="bi-plus-circle-fill"></i>
-                        </button>
-                        <button>
-                            <i class="bi-three-dots"></i>
+                    <div class="tasks dragable-container"
+                        cdkDropList
+                        [cdkDropListData]="section.tasks"
+                        (cdkDropListDropped)="drop($event)"  
+                    >
+                        @for (task of section.tasks; track $index) {
+                            <div class="task card dragable" cdkDragBoundary=".sections" cdkDrag>
+                                <p class="label">{{task.label}}</p>
+                                <div class="badge">
+                                    <span class="priority critical">{{task.priority}}</span>
+                                    <span class="group">{{task.group}}</span>
+                                </div>
+                                <p>
+                                    <i class="bi-clock"></i>
+                                    <span>{{task.dueDate}}</span>
+                                </p>
+                            </div>
+                        }
+                        <button class="dashed add">
+                            <i class="bi-plus-circle-dotted"></i>
+                            <span>Add Task</span>
                         </button>
                     </div>
                 </div>
-                <div class="tasks">
-                    <div class="task card">
-                        <p class="label">Set final deadline </p>
-                        <div class="badge">
-                            <span class="priority critical">Critical</span>
-                            <span class="group">Group</span>
-                        </div>
-                        <p>
-                            <i class="bi-clock"></i>
-                            <span>14:00 - 15:30</span>
-                        </p>
-                    </div>
-                    <button class="dashed add">
-                        <i class="bi-plus-circle-dotted"></i>
-                        <span>Add Task</span>
-                    </button>
-                </div>
-            </div>
-            <div class="section">
-                <div class="header">
-                    <span class="section-title">Review</span>
-                    <div class="btn-container">
-                        <button>
-                            <i class="bi-plus-circle-fill"></i>
-                        </button>
-                        <button>
-                            <i class="bi-three-dots"></i>
-                        </button>
-                    </div>
-                </div>
-                <div class="tasks">
-                    <div class="task card">
-                        <p class="label">Set final deadline </p>
-                        <div class="badge">
-                            <span class="priority critical">Critical</span>
-                            <span class="group">Group</span>
-                        </div>
-                        <p>
-                            <i class="bi-clock"></i>
-                            <span>14:00 - 15:30</span>
-                        </p>
-                    </div>
-                    <button class="dashed add">
-                        <i class="bi-plus-circle-dotted"></i>
-                        <span>Add Task</span>
-                    </button>
-                </div>
-            </div>
+            } 
         </div>
     </div>
 </div>

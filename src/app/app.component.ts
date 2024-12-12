@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
 import { routes } from './app.routes';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,14 @@ import { routes } from './app.routes';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  
   title = 'desktop';
+
+  constructor(private appService:AppService){}
+
+  ngOnInit(): void {
+    // this.appService.initDB();
+  }
+
 }

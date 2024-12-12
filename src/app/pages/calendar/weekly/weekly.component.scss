@@ -1,10 +1,18 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    width: 61%;
+    overflow: hidden;
+}
+.scrollable-content{
+    flex: 1 1 auto;
+    overflow-y: hidden;
+}
 .days{
     display: flex;
     flex-direction: row;
-    height: 78vh;
-    overflow: auto;
-    border-radius: 10px;
-    box-shadow: 0px 0px 1px 1px rgba(0, 0, 0, 0.192);
+    height: 100%;
     .disabled{
         filter: contrast(75%) brightness(90%);
         button{

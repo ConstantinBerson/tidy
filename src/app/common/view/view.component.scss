@@ -31,10 +31,11 @@
 .row{
     display: flex;
     height: 100%;
+    width: 100%;
+    gap: 4vw;
     .side-nav{
         margin-top: 1.5em;
-        padding-left: 1em;
-        width: 20vw;
+        padding: 0 1em;
         min-width: 150px;
         button{
             margin-bottom: 1em;
@@ -51,9 +52,9 @@
         }
     }
     .content{
-        width: 80vw;
+        flex: 0;
+        width: fit-content;
         padding: 1em;
-        overflow: hidden;
     }
 }
 
